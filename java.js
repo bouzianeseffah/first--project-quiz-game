@@ -57,11 +57,11 @@ function loadQuiz(){
     d_text.innerText = currentQuizData.d
 }
 function deselectAnswers(){
-    answerEls.forEach(answerEls => answerEls.checked = false)
+    answerEls.forEach(answerEl => answerEl.checked = false)
 }
 function getSelected(){
      
-    let answerEls
+    let answer
     answerEls.forEach(answerEl => {
         if(answerEl.checked) {
             answer = answerEl.id
