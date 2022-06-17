@@ -68,8 +68,20 @@ function getSelected(){
         }
     })
     return answer
-
 }
+submitBtn.addEventListener('click', () => {
+    const answer = getSelected()
+    if(answer === quizData[currentQuiz].correct ) {
+        score++
+    }
+    currentQuiz++
+    if(currentQuiz < quizData.length) {
+        loadQuiz()
+    } else{
+        quiz.innerHTML =  `<h2>you answered ${score} / ${quizData.length} question correctly  </h2>
+        <button onclick = 'location.reload()'>Reload</button>`
+    }
+})
 
 
 
