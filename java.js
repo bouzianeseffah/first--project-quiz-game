@@ -59,7 +59,6 @@ const b_text = document.getElementById('b_text')
 const c_text = document.getElementById('c_text')
 const d_text = document.getElementById('d_text')
 const submitBtn = document.getElementById('submit')
-const scores = document.getElementById('score')
 
 let currentQuiz = 0
 let score = 0 
@@ -100,6 +99,7 @@ submitBtn.addEventListener('click', () => {
         loadQuiz()
         
     } else{
+        //add condition of color changing if scor less or
         if((score / quizData.length) < 0.5){
             quiz.style.background = 'red'
           
