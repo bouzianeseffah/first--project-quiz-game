@@ -62,6 +62,7 @@ const submitBtn = document.getElementById('submit')
 
 let currentQuiz = 0
 let score = 0 
+//function load quiz
 loadQuiz()
 function loadQuiz(){
     deselectAnswers()
@@ -72,6 +73,7 @@ function loadQuiz(){
     c_text.innerText = currentQuizData.c
     d_text.innerText = currentQuizData.d
 }
+// checking the answer 
 function deselectAnswers(){
     answerEls.forEach(answerEl => answerEl.checked = false)
 }
@@ -85,6 +87,7 @@ function getSelected(){
     })
     return answer
 }
+// add event listener to the click button 
 submitBtn.addEventListener('click', () => {
     const answer = getSelected()
     if(answer === quizData[currentQuiz].correct ) {
@@ -93,9 +96,17 @@ submitBtn.addEventListener('click', () => {
     currentQuiz++
     if(currentQuiz < quizData.length) {
         loadQuiz()
+        
     } else{
+        if((score / quizData.length) < 0.5){
+            quiz.style.background = 'red'
+        }  
+       
         quiz.innerHTML =  `<h2>you answered ${score} / ${quizData.length} question correctly  </h2>
         <button onclick = 'location.reload()'>Reload</button>`
+         if((score / quizData.length) > 0.5){
+            quiz.style.background = 'green'
+        }  
     }
 })
 
