@@ -10,6 +10,7 @@ body{
     height:100vh ;
     overflow: hidden;
     margin: 0;
+    background-image:url("R.jpg");
 }
 .quiz-container{
     background-color:azure ;
@@ -53,8 +54,5 @@ button:hover{
 ul li :hover{
     background-color: rgb(244, 236, 236);
     font-size: 1.2rem;
-    margin: 0.5rem 0;
-    
-    border-radius: 1em;
-
+    margin: 0.5rem 0; 
 }
