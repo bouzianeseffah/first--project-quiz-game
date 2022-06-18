@@ -33,6 +33,22 @@ const quizData = [
             d: 'california',
             correct: 'c'
         },
+        {
+            question: 'in which year apple is made',
+            a: '1975',
+            b: '1976',
+            c: '1978',
+            d: '1979',
+            correct: 'b'
+        },
+        {
+            question: 'how many weeks in a year',
+            a: '51',
+            b: '53',
+            c: '50',
+            d: '52',
+            correct: '4'
+        },
 ]
 //variables
 const quiz = document.getElementById('quiz')
