@@ -1,0 +1,78 @@
+@import "utilities";
+@import "config";
+*{
+    box-sizing:  border-box;
+}
+body{
+    &{
+        background-color: set-color($first-color);
+        background-image: $back-ground-image; 
+     }
+    font-family: 'Courier New', Courier, monospace ;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    justify-content: center;
+    height:set-hw(100vh, none) ;
+    @include padding-marging(0);
+    .quiz-container{
+        background-color: set-color($third-color);
+        @include border-font(1em);
+        box-shadow:0 0 10px 2px rgb(247, 239, 239);
+        width:set-hw( none, 600px) ;
+        overflow:  hidden;
+
+    };
+    .quiz-header{
+        @include padding-marging(4rem);
+        h2 {
+            @include padding-marging(1rem);
+            text-align: center;
+            @include padding-marging(0%);
+
+        }
+
+    }
+ 
+    
+}
+ul {
+    
+    @include padding-marging(0%);
+    li{
+        font-size: 1.2rem;
+        @include padding-marging(1rem 0);
+        background-color: set-color($color-1);
+        @include border-font(1em)
+    }
+}
+
+body{  
+   button{
+      background-color: set-color($color-2);
+      color: set-color($color-3); 
+      border: none;
+      display: block;
+      width: set-hw(none, 100%);
+      cursor: pointer;
+      @include border-font(1.1rem);
+      font-family: 'Courier New', Courier, monospace;
+      @include padding-marging(1.3rem) 
+
+     }
+}
+body{
+    button:hover{
+      @include  display()
+    }
+    
+}
+ul{
+    li :hover{
+        @include  display()
+    }
+    &{
+        list-style-type: none;
+    }
+}
+

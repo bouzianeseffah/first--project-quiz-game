@@ -1,0 +1,30 @@
+
+@function set-color($color) {
+    @return $color
+};
+
+@function set-hw($height, $width) {
+    @return $height, $width
+};
+
+
+
+@mixin display {
+    background-color: rgb(244, 236, 236);
+    font-size: 1.2rem;
+    margin: 0.5rem 0; 
+    
+};
+@mixin padding-marging($number) {
+    padding:$number;
+    margin: $number
+    
+};
+@mixin border-font($number) {
+    border-radius: $number;
+    font-size: $number;
+}
+
+
+
+
